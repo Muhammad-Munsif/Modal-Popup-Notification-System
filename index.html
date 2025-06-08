@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal & Notification System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="bg-gray-100 min-h-screen p-4 md:p-8">
+    <!-- Rest of your HTML remains the same -->
+    <div class="max-w-6xl mx-auto">
+      <h1 class="text-3xl font-bold text-gray-800 mb-8">
+        Modal & Notification System
+      </h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h2 class="text-xl font-semibold mb-4">Modal Examples</h2>
+          <div class="space-y-3">
+            <button
+              id="defaultModalBtn"
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded transition"
+            >
+              Default Modal
+            </button>
+            <button
+              id="largeModalBtn"
+              class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded transition"
+            >
+              Large Modal
+            </button>
+            <button
+              id="scrollableModalBtn"
+              class="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded transition"
+            >
+              Scrollable Content Modal
+            </button>
+            <button
+              id="centeredModalBtn"
+              class="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded transition"
+            >
+              Centered Modal
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h2 class="text-xl font-semibold mb-4">Notification Examples</h2>
+          <div class="grid grid-cols-2 gap-3">
+            <button
+              id="successNotifBtn"
+              class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded transition"
+            >
+              Success
+            </button>
+            <button
+              id="errorNotifBtn"
+              class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded transition"
+            >
+              Error
+            </button>
+            <button
+              id="warningNotifBtn"
+              class="bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded transition"
+            >
+              Warning
+            </button>
+            <button
+              id="infoNotifBtn"
+              class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded transition"
+            >
+              Info
+            </button>
+          </div>
+          <div class="mt-4">
+            <button
+              id="customNotifBtn"
+              class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded transition"
+            >
+              Custom Notification
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Backdrop -->
+    <div
+      id="modalBackdrop"
+      class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden opacity-0 transition-opacity duration-200"
+    ></div>
+
+    <!-- Notification Container -->
+    <div
+      id="notificationContainer"
+      class="fixed right-4 bottom-4 z-50 space-y-3 w-full max-w-xs"
+    ></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+/* Fixed animation classes */
+.notification-enter {
+  transform: translateX(100%);
+}
+.notification-enter-active {
+  transform: translateX(0);
+  transition: transform 300ms ease-out;
+}
+.notification-exit {
+  transform: translateX(0);
+}
+.notification-exit-active {
+  transform: translateX(100%);
+  transition: transform 300ms ease-in;
+}
+
+.modal-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.modal-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 200ms, transform 200ms;
+}
+.modal-exit {
+  opacity: 1;
+}
+.modal-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 200ms, transform 200ms;
+}
+
+/* Added to handle modal overflow */
+.modal-content {
+  max-height: 80vh;
+  overflow-y: auto;
+}
